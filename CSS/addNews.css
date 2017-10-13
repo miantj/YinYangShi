@@ -1,0 +1,35 @@
+#addNews {
+  margin: 30px auto;
+  width: 1400px;
+  height: 80px;
+}
+#addNews .wrap {
+  height: 100%;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  margin-left: 300px;
+}
+#newsTitle,
+#newsType,
+#newsSubmit,
+#newsFresh {
+  height: 40px;
+  outline-color: #31b0d5;
+  border-radius: 2px;
+}
+#newsType {
+  text-align: center;
+}
+#newsType option {
+  text-align: center;
+}
+#newsTitle {
+  padding: 5px;
+  flex-grow: 1;
+}
+#newsSubmit,
+#newsFresh {
+  width: 60px;
+  background-color: #68d7fc;
+}

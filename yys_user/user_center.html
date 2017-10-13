@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/user_center.css">
+    <title>yys_user_center</title>
+</head>
+<body>
+<!--顶部导航条-->
+<header id="top">
+    <div>
+        <ul class="nav">
+            <li class="logo">
+                <a href="../index.html">
+                    <img src="images/top_logo.png" alt="logo"/>
+                </a>
+            </li>
+            <li>
+                <a href="#">官方首页</a>
+                <a href="#" class="back">官方首页</a>
+            </li>
+            <li>
+                <a href="#">新闻资讯</a>
+                <a href="#" class="back">新闻资讯</a>
+            </li>
+            <li>
+                <a href="#">游戏攻略</a>
+                <a href="#" class="back">游戏攻略</a>
+            </li>
+            <li>
+                <a href="#">游戏特色</a>
+                <a href="#" class="back">游戏特色</a>
+            </li>
+            <li>
+                <a href="#">同人专区</a>
+                <a href="#" class="back">同人专区</a>
+            </li>
+            <li class="slide"></li>
+            <!--<li>游戏下载</li>-->
+        </ul>
+        <div class="user_info">
+            <div class="user_panel">
+                <p class="user_name"></p>
+                <p style="color: #e4393c;display: none;text-align: center" class="vip">高贵的会员</p>
+                <div class="lv_info clear">
+                    <span class="lv_text f_left">等级</span>
+                    <div class="lv_bar f_left">
+                        <div class="lv_bar_wrap f_left">
+                            <div class="lv_bar_bg"></div>
+                            <div class="lv_bar_info"></div>
+                        </div>
+                        <div class="lv f_left"></div>
+                    </div>
+                    <div class="lv_num f_right">
+
+                    </div>
+                </div>
+                <ul class="user_list clear">
+                    <li class="user_center">
+                        <i></i><span>个人中心</span>
+                    </li>
+                    <li class="user_straw">
+                        <i></i><span>我的投稿</span>
+                    </li>
+                    <li class="user_rich">
+                        <i></i><span>我的财富</span>
+                    </li>
+                    <li class="user_video">
+                        <i></i><span>我的视频</span>
+                    </li>
+                </ul>
+                <div class="user_exit">
+                    <a href="#">退出</a>
+                </div>
+            </div>
+            <div class="user_header_wrap">
+                <div class="user_header">
+                    <img src="">
+                </div>
+            </div>
+        </div>
+        <!--<p><a href="#">游戏下载</a></p>-->
+    </div>
+</header>
+<!--顶部导航条结束-->
+<!--顶部背景图片-->
+<div id="top-bg" class="container-full"></div>
+<!--顶部背景图片结束-->
+<!--内容区域-->
+<div class="container clear" id="content">
+    <!--左侧导航-->
+    <aside class="user_nav f_left">
+        <!--<p class="title">个人中心</p>-->
+        <ul>
+            <li class="title">个人中心</li>
+            <li class="topPage">
+                <a href="#"><i></i><span>首页</span></a>
+                <div>
+                </div>
+            </li>
+            <li class="myShishen active">
+                <a href="shishen_wrap"><i></i><span>我的式神</span></a>
+                <div>
+
+                </div>
+            </li>
+            <li class="shishenCount">
+                <a href="shishen_count_wrap"><i></i><span>式神统计</span></a>
+                <div>
+                </div>
+            </li>
+        </ul>
+    </aside>
+    <!--左侧导航结束-->
+    <aside class="user_content f_left">
+        <!--头部个人信息-->
+        <div class="header_userInfo clear">
+            <div class="header_img f_left">
+                <img src="" alt="">
+            </div>
+            <ul class="handle_info f_left">
+                <li class="uname">
+                    <b></b>
+                    <span>正式会员</span>
+                </li>
+                <li class="lv_bar_wrap_lg">
+                    <div class="lv_text f_left"></div>
+                    <div class="lv_middle1 f_left"></div>
+                    <div class="lv_middle2 f_left"></div>
+                    <div class="bar_wrap f_left">
+                        <div class="bar_info"></div>
+                    </div>
+                    <div class="lv_num f_left">
+
+                    </div>
+                    <a class="person_center f_right">个人中心 &gt;</a>
+                    <a class="set_info f_right">修改资料</a>
+                </li>
+            </ul>
+        </div>
+        <div id="myShishen">
+            <ul>
+                <li>
+                    <a href="#" class="s_pic">
+                        <img src="" alt="">
+                    </a>
+                    <a href="#" class="s_name"></a>
+                </li>
+            </ul>
+        </div>
+        <div id="myShishenCount">
+
+        </div>
+
+    </aside>
+    <aside class="info_content f_left">
+        <div class="shishen_wrap show">
+            <div class="shishen">
+
+            </div>
+            <div class="prev_next f_right">
+                <a class="prev"></a>
+                <a class="next show"></a>
+            </div>
+        </div>
+        <div class="shishen_count_wrap">
+            <canvas id="c1"></canvas>
+        </div>
+    </aside>
+</div>
+
+<!--内容区域结束-->
+<!--页脚-->
+<div id="footer_wrap"></div>
+<!--页脚结束-->
+<!--字体高度样板-->
+<span id="font_h">雪</span>
+<script src="js/func.js"></script>
+<script src="js/user_center.js"></script>
+<script src="js/user_center_canvas.js"></script>
+</body>
+</html>

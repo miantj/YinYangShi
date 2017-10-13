@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+<!--头部导航-->
+<header id="top">
+    <div>
+        <ul>
+            <li class="logo">
+                <a href="../index.html">
+                    <img src="img/top_logo.png" alt="logo"/>
+                </a>
+            </li>
+            <li>
+                <a href="#">官方首页</a>
+                <a href="#" class="back">官方首页</a>
+            </li>
+            <li>
+                <a href="#">新闻资讯</a>
+                <a href="#" class="back">新闻资讯</a>
+            </li>
+            <li>
+                <a href="#">游戏攻略</a>
+                <a href="#" class="back">游戏攻略</a>
+            </li>
+            <li>
+                <a href="#">游戏特色</a>
+                <a href="#" class="back">游戏特色</a>
+            </li>
+            <li>
+                <a href="#">同人专区</a>
+                <a href="#" class="back">同人专区</a>
+            </li>
+            <li class="slide"></li>
+            <!--<li>游戏下载</li>-->
+        </ul>
+        <p><a href="#">游戏下载</a></p>
+    </div>
+</header>
+<!--头部导航结束-->
+<!--登录内容区域-->
+<section id="login">
+
+    <div class="login_wrap">
+        <div class="line"></div>
+        <img class="login_pic" src="img/login_logo.png" alt="login"/>
+        <div class="line"></div>
+        <aside class="login_erweima">
+            <div class="qr_code">
+                <img src="img/erweima/login.png" alt="erweima"/>
+                <p class="qr_code_title">
+                    扫描二维码登录
+                </p>
+            </div>
+            <div class="qr_code_pic">
+                <img src="img/yingcao.png" alt="yingcao"/>
+            </div>
+
+
+        </aside>
+        <aside class="login_input">
+            <!--<form action="#" method="post">-->
+                <ul>
+                    <li>
+                        <label for="uname">用户名:</label>
+                        <input type="text" name="uname" placeholder="你的手机号码/邮箱" id="uname"/>
+                        <i></i>
+                    </li>
+                    <li>
+                        <label for="upwd">密码:</label>
+                        <input type="password" placeholder="密码" id="upwd" name="upwd"/>
+                        <i></i>
+                    </li>
+                    <li class="forget">
+                        <a href="#">忘记密码?&gt;</a>
+                    </li>
+                    <li class="check">
+                        <label><span>验证码:</span><input type="text" placeholder="验证码" id="check_input"/></label>
+                        <span>
+                            <img src="img/check_num/captcha-0.jpg" alt="cap"/>
+                        </span>
+                        <p>换一张</p>
+                        <i></i>
+                    </li>
+                    <li class="remember">
+                        <label>
+                            <input type="checkbox" id="rem"/>
+                            <em>记住我</em>
+                        </label>
+                        <span>不是自己电脑不要勾选</span>
+                    </li>
+                    <li class="btn">
+                        <input type="button" value="登录" class="btn_login"/>
+                        <a href="../yys_reg/reg.html" class="btn_reg">注册</a>
+                        <!--<input type="button" value="注册" class="btn_reg"/>-->
+
+                    </li>
+                    <li class="ot_login">
+                        <a href="#" class="login_weibo">
+                            <em></em>
+                            <span>微博账号登录</span>
+                        </a>
+
+                        <a href="#" class="login_qq">
+                            <em></em>
+                            <span>QQ账号登录</span>
+                        </a>
+                    </li>
+                    <span class="err">登录失败请重新输入</span>
+                </ul>
+            <p class="succ">登陆成功，页面即将跳转</p>
+            <!--</form>-->
+        </aside>
+    </div>
+</section>
+<!--登录内容结束-->
+<!--底部信息-->
+<footer id="footer">
+    <ul class="footer_wrap">
+        <li class="tips">
+            <p>阴阳师</p>
+            <a href="#">关于我们</a>
+            <a href="#">友情链接</a>
+            <a href="#">阴阳师周边</a>
+            <a href="#">联系我们</a>
+            <a href="#">加入我们</a>
+            <a href="#">官方认证</a>
+        </li>
+        <li class="tips">
+            <p>
+                传送门
+            </p>
+            <a href="#">帮助中心</a>
+            <a href="#">新闻资讯</a>
+            <a href="#">游戏攻略</a>
+            <a href="#">游戏特色</a>
+            <a href="#">同人专区</a>
+            <a href="#">视频壁纸</a>
+        </li>
+        <li class="pic">
+            <a href="#">
+                <em></em>
+                <span>游戏下载</span>
+                <div>
+                <img src="img/erweima/download.png" alt="download">
+                </div>
+            </a>
+            <a href="#">
+                <em></em>
+                <span>新浪微博</span>
+                <div>
+                <img src="img/erweima/weibo.png" alt="weibo">
+                </div>
+            </a>
+            <a href="#">
+                <em></em>
+                <span>官方微信</span>
+                <div>
+                <img src="img/erweima/weixin.jpg" alt="weixin">
+                </div>
+            </a>
+        </li>
+    </ul>
+    <p id="shengming" style="color: #e4393c;font-size: 16px;margin:20px auto;width: 980px;">此页面参考bilibili登录页面设计</p>
+</footer>
+<!--底部信息结束-->
+<script src="login.js"></script>
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1953 @@
+/*公共样式*/
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Microsoft Yahei";
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: bottom;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+dd,
+dt {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.f_left {
+  float: left;
+}
+.f_right {
+  float: right;
+}
+.clear:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/*******最小宽度******/
+#main {
+  min-width: 1400px;
+  max-width: 1920px;
+}
+/*导航栏和banner*/
+#top {
+  position: relative;
+  overflow: hidden;
+  max-width: 1920px;
+  width: 100%;
+  min-width: 1400px;
+  height: 585px;
+  margin: 0 auto;
+  background: url("images/banner/banner-bg.jpg") no-repeat center top;
+}
+#top div.user_info {
+  width: 70px;
+  height: 70px;
+  margin-left: 130px;
+  position: relative;
+  visibility: hidden;
+}
+#top div.user_info div.user_header_wrap {
+  height: 70px;
+  width: 70px;
+}
+#top div.user_info div.user_header_wrap div.user_header {
+  position: relative;
+  top: 16px;
+  margin: 0 auto;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  transition: all .3s;
+}
+#top div.user_info div.user_header_wrap div.user_header img {
+  width: 100%;
+}
+#top div.user_info div.user_panel {
+  padding: 35px 10px 0;
+  position: absolute;
+  top: 70px;
+  left: -95px;
+  width: 260px;
+  height: 0;
+  border: 1px solid #e1e2e5;
+  border-top-color: transparent;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+  background: #fafafa;
+  overflow: hidden;
+  transition: all .3s;
+  opacity: 0;
+}
+#top div.user_info div.user_panel p.user_name {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+#top div.user_info div.user_panel div.lv_info {
+  width: 100%;
+}
+#top div.user_info div.user_panel div.lv_info span.lv_text {
+  display: inline-block;
+  white-space: nowrap;
+  width: 40px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+#top div.user_info div.user_panel div.lv_info div.lv_bar {
+  width: 185px;
+  height: 30px;
+  position: relative;
+}
+#top div.user_info div.user_panel div.lv_info div.lv {
+  border-radius: 50%;
+  width: 18px;
+  background: url("images/userInfo/Level-icons.png") no-repeat -153px -152px;
+}
+#top div.user_info div.user_panel div.lv_info div.lv,
+#top div.user_info div.user_panel div.lv_info div.lv_bar_wrap {
+  position: absolute;
+  top: 50%;
+  height: 18px;
+  transform: translateY(-50%);
+}
+#top div.user_info div.user_panel div.lv_info div.lv,
+#top div.user_info div.user_panel div.lv_info div.lv_bar_info {
+  background-color: #f3cb85;
+}
+#top div.user_info div.user_panel div.lv_info div.lv_bar_info,
+#top div.user_info div.user_panel div.lv_info div.lv_bar_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#top div.user_info div.user_panel div.lv_info div.lv_bar_info {
+  height: 100%;
+  width: 80%;
+}
+#top div.user_info div.user_panel div.lv_info div.lv_bar_bg {
+  background-color: #e1e2e5;
+  width: 180px;
+  height: 100%;
+}
+#top div.user_info div.user_panel div.lv_info div.lv_bar_wrap {
+  position: relative;
+  left: 15px;
+  width: 180px;
+  height: 14px;
+}
+#top div.user_info div.user_panel div.lv_info div.lv_num {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  color: #99a2aa;
+  text-align: right;
+}
+#top div.user_info div.user_panel div.lv_info div.lv_num span {
+  color: #000;
+}
+#top div.user_info div.user_panel .user_list {
+  width: 100%;
+  border-top: 1px solid #e1e2e5;
+  padding-top: 15px;
+}
+#top div.user_info div.user_panel .user_list li:before {
+  content: '';
+  display: table;
+}
+#top div.user_info div.user_panel .user_list li {
+  width: 119px;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  cursor: pointer;
+}
+#top div.user_info div.user_panel .user_list li i {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  margin: 0 7px;
+  width: 16px;
+  height: 16px;
+  background: url("images/userInfo/icons.png") no-repeat;
+}
+#top div.user_info div.user_panel .user_list li.user_center i {
+  background-position: -472px -407px;
+}
+#top div.user_info div.user_panel .user_list li.user_straw i {
+  background-position: -536px -1046px;
+}
+#top div.user_info div.user_panel .user_list li.user_rich i {
+  background-position: -472px -472px;
+}
+#top div.user_info div.user_panel .user_list li.user_video i {
+  background-position: -473px -855px;
+}
+#top div.user_info div.user_panel .user_list li:hover {
+  color: #00a1d6;
+}
+#top div.user_info div.user_panel div.user_exit {
+  margin: 20px -10px 0;
+  padding-right: 10px;
+  text-align: right;
+  height: 40px;
+  line-height: 40px;
+  background-color: #f1f1f1 ;
+  cursor: pointer;
+}
+#top div.user_info div.user_panel div.user_exit:hover a {
+  color: #00a1d6;
+}
+#top div.user_info:hover div.user_header {
+  transform: scale(1.5) translateY(20px);
+}
+#top div.user_info:hover div.user_panel {
+  display: block;
+  opacity: 1;
+  height: auto;
+}
+#top div.nav-bar {
+  transition: all 0.5s ease-in 0s;
+  position: absolute;
+  top: 0;
+  height: 71px;
+  width: 100%;
+  z-index: 10000;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+#top div.nav-bar:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+#top div.nav-bar.show {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 7px 4px #eee inset;
+  height: 71px;
+  opacity: 1;
+}
+#top div.nav-bar > ul {
+  display: inline-block;
+  background-color: transparent;
+  padding: 25px 15px;
+}
+#top div.nav-bar > ul > li {
+  width: 100px;
+  height: 21px;
+  float: left;
+  display: flex;
+  padding-left: 10px;
+  justify-content: space-between;
+}
+#top div.nav-bar > ul > li a {
+  width: 70px;
+  text-align: center;
+}
+#top div.nav-bar a {
+  color: #333;
+}
+#top div.nav-bar a:hover {
+  color: #cc4336;
+}
+#top div.logo {
+  position: absolute;
+  top: 75px;
+  left: 1%;
+  opacity: 1;
+  transition: all.5s;
+}
+#top div.logo.hide {
+  opacity: 0;
+  transform: scale(0);
+}
+#top div.logo a {
+  background: url("images/banner/logo_1.png") no-repeat;
+  display: inline-block;
+  width: 70px;
+  height: 199px;
+}
+#top div.banner {
+  position: relative;
+  left: 6%;
+  width: 88%;
+  height: 595px;
+  margin: 0 auto;
+  z-index: 999;
+  display: flex;
+  flex-direction: column-reverse;
+}
+#top div.banner-jiaose {
+  width: 740px;
+  height: 570px;
+  position: relative;
+}
+#top div.banner-jiaose > div.active span.r1 {
+  opacity: 1;
+  transform: translateX(100px);
+}
+#top div.banner-jiaose > div.active span.r2 {
+  opacity: 1;
+  transform: translateX(-100px);
+}
+#top div.banner-jiaose span.r1 {
+  text-align: right;
+}
+#top div.banner-jiaose span.r2 {
+  text-align: left;
+}
+#top div.banner-jiaose > div {
+  width: 740px;
+  height: 570px;
+  position: absolute;
+}
+#top div.banner-jiaose span {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  width: 500px;
+  height: 570px;
+  left: 80px;
+  line-height: 570px;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all .5s ease 0s;
+}
+#top div.banner-jiaose i {
+  display: block;
+  width: 50px;
+  height: 69px;
+  position: absolute;
+  right: 0;
+  top: 250px;
+  cursor: pointer;
+  background: url("images/index_xiaotuji.png") no-repeat -624px -360px;
+}
+#top div.zuoxia-gif {
+  position: absolute;
+  left: 70px;
+  bottom: 0;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 200ms linear 0s;
+}
+#top div.zuoxia-gif:hover {
+  opacity: 0.7;
+}
+#top div.download-wrap {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 123px;
+  width: 390px;
+  padding: 10px 10px 5px 10px;
+  background-color: #fccc00;
+  box-shadow: 0 0 7px 4px #feeb00 inset;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-right: -242px;
+  z-index: 1001;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.5s;
+}
+#top div.download-wrap a.download-close {
+  width: 22px;
+  height: 23px;
+  background: url("images/index_xiaotuji.png") no-repeat -1492px -346px;
+}
+#top div.download-wrap b.download-text {
+  width: 45px;
+  height: 100px;
+  background: url("images/index_xiaotuji.png") no-repeat -1289px -283px;
+}
+#top div.download-wrap div.download-erweima {
+  width: 107px;
+  height: 107px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: #ffffff;
+  position: relative;
+  transition: all 0.5s;
+}
+@keyframes downloadbar {
+  0% {
+    top: 10px;
+  }
+  100% {
+    top: 89px;
+  }
+}
+#top div.download-wrap div.download-erweima img.download-img {
+  left: 0.5px;
+  position: absolute;
+  animation: downloadbar 2.5s linear 0s infinite normal;
+}
+#top div.download-wrap div.download-button {
+  display: flex;
+  width: 171px;
+  height: 107px;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s;
+}
+#top div.download-wrap div.download-button a {
+  width: 170px;
+  height: 51px;
+  background: url("images/index_xiaotuji.png") no-repeat;
+}
+#top div.download-wrap div.download-button a.button-ios {
+  background-position: -244px -303px;
+}
+#top div.download-wrap div.download-button a.button-ios:hover {
+  background-position: -931px -1263px;
+}
+#top div.download-wrap div.download-button a.button-android {
+  background-position: -1101px -1262px;
+}
+#top div.download-wrap div.download-button a.button-android:hover {
+  background-position: -1353px 0px;
+}
+#top div.download-wrap.close {
+  width: 100px;
+}
+#top div.download-wrap.close a.download-close {
+  transform: rotate(180deg);
+}
+#top div.download-wrap.close div.download-erweima,
+#top div.download-wrap.close div.download-button {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#right_game_rili {
+  position: absolute;
+  left: 50%;
+  top: 419px;
+  margin-left: 242px;
+  height: 1181px;
+  width: 515px;
+  background: url("images/right-game-rili/big_bg.png") no-repeat;
+  z-index: 1002;
+}
+#right_game_rili em.lf-caret {
+  position: absolute;
+  left: 0;
+  top: 70px;
+  height: 0;
+  width: 0;
+  border-left: 5px solid #fee300;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+#right_game_rili p.rili-title {
+  position: absolute;
+  left: 25px;
+  top: -15px;
+  width: 321px;
+  height: 168px;
+  background: url("images/index_xiaotuji.png") no-repeat -695px -366px;
+}
+#right_game_rili ul.rili-list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 850px;
+  width: 346px;
+  top: 135px;
+}
+#right_game_rili ul.rili-list li:not(.damo) {
+  flex-grow: 1;
+  display: flex;
+  height: 93px;
+}
+#right_game_rili ul.rili-list li:not(.damo) a {
+  height: 95px;
+  width: 331px;
+  background: url("images/index_xiaotuji.png") no-repeat;
+}
+#right_game_rili ul.rili-list li:not(.damo) a span {
+  font-size: 13px;
+  color: #000;
+}
+#right_game_rili ul.rili-list li:nth-child(odd):not(.damo) {
+  margin-left: 25px;
+}
+#right_game_rili ul.rili-list li:nth-child(even):not(.damo) {
+  margin-right: 25px;
+}
+#right_game_rili ul.rili-list li:not(.damo) {
+  transition: transform 0.2s linear 0s;
+}
+#right_game_rili ul.rili-list li:not(.damo):not(.fuben):hover {
+  transform: translate(25px);
+}
+#right_game_rili ul.rili-list li.douji > a {
+  background-position: 9px -904px;
+  padding-top: 45px;
+  padding-left: 16px;
+}
+#right_game_rili ul.rili-list li.nianshou > a {
+  background-position: -314px -899px;
+  padding-left: 132px;
+  padding-top: 42px;
+}
+#right_game_rili ul.rili-list li.shiju > a {
+  background-position: -311px -1002px;
+  padding-left: 16px;
+  padding-top: 45px;
+}
+#right_game_rili ul.rili-list li.shoulie > a {
+  background-position: -1010px -518px;
+  padding-left: 140px;
+  padding-top: 42px;
+}
+#right_game_rili ul.rili-list li.xuanshang > a {
+  background-position: -949px -900px;
+  padding-left: 16px;
+  padding-top: 48px;
+}
+#right_game_rili ul.rili-list li.tupo > a {
+  background-position: 10px -1002px;
+  padding-left: 115px;
+  padding-top: 42px;
+}
+#right_game_rili ul.rili-list li.fuben > a {
+  background-position: -1022px -8px;
+  padding-left: 16px;
+  padding-top: 48px;
+}
+#right_game_rili ul.rili-list li.yeyuanhuo > a {
+  background-position: -628px -902px;
+  padding-left: 107px;
+  padding-top: 34px;
+}
+#right_game_rili ul.rili-list li.fuben {
+  position: relative;
+}
+#right_game_rili ul.rili-list li.fuben a {
+  position: absolute;
+  height: 137px;
+}
+#right_game_rili ul.rili-list li.fuben div.fuben-h {
+  overflow: hidden;
+  display: none;
+  width: 331px;
+  padding: 48px 16px 10px 16px;
+  background: url("images/index_xiaotuji.png") no-repeat -127px -8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: height 0.2s linear 0s;
+}
+#right_game_rili ul.rili-list li.fuben div.fuben-items {
+  margin-top: 28px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#right_game_rili ul.rili-list li.fuben:hover div.fuben-h {
+  display: block;
+  height: 95px;
+}
+#right_game_rili ul.rili-list li.fuben:hover div.fuben-h:hover {
+  height: 294px;
+}
+#right_game_rili ul.rili-list li.damo {
+  display: flex;
+  height: 103px;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+#right_game_rili ul.rili-list li.damo a {
+  width: 93px;
+  transition: transform 0.2s linear 0s;
+  background: url("images/index_xiaotuji.png") no-repeat;
+}
+#right_game_rili ul.rili-list li.damo a:hover {
+  transform: translateY(10px);
+}
+#right_game_rili ul.rili-list li.damo a.weibo {
+  background-position: -1126px -724px;
+}
+#right_game_rili ul.rili-list li.damo a.weixin {
+  background-position: -1126px -620px;
+}
+#right_game_rili ul.rili-list li.damo a.luntan {
+  background-position: -458px -223px;
+}
+#left-news {
+  width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  /****wrap层左移样式***/
+  /****wrap层右移样式***/
+  /****需要显示时显示***/
+  /*****图片轮播结束****/
+}
+#left-news div.news-banner {
+  width: 360px;
+  height: 270px;
+  margin-left: -106px;
+  position: relative;
+  overflow: hidden;
+}
+#left-news div.news-banner-wrap {
+  /**下层绝对定位,动画移动此层**/
+  position: relative;
+  width: 360px;
+  left: 0;
+  height: 270px;
+  transform: translateX(0);
+}
+#left-news div.news-banner-wrap.lt {
+  animation: bann_showlt .5s ease 0s 1 normal;
+  animation-fill-mode: forwards;
+}
+#left-news div.news-banner-wrap.rt {
+  animation: bann_showrt .5s ease 0s 1 normal;
+  animation-fill-mode: forwards;
+}
+@keyframes bann_showlt {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-360px);
+  }
+}
+@keyframes bann_showrt {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(360px);
+  }
+}
+#left-news a.banner-items {
+  position: absolute;
+  display: none;
+  width: 360px;
+}
+#left-news a.banner-items.show {
+  display: block;
+  left: 0;
+}
+#left-news a.banner-items.next {
+  display: block;
+  left: 360px;
+}
+#left-news div.news-banner-nav {
+  position: absolute;
+  width: 102px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -51px;
+}
+#left-news div.news-banner-nav a {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 3px solid #e37b63;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -ms-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s;
+}
+#left-news div.news-banner-nav a.on,
+#left-news div.news-banner-nav a:hover {
+  background: #e37b63;
+}
+#news-wrap {
+  margin-left: 50px;
+  width: 500px;
+}
+#news-wrap div.news-tabs {
+  border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+#news-wrap div.news-tabs a {
+  width: 74px;
+  height: 35px;
+  position: relative;
+  text-align: center;
+  margin-right: 10px;
+}
+#news-wrap div.news-tabs a span {
+  display: inline-block;
+  position: relative;
+  width: 45px;
+  height: 31px;
+  background: url("images/index_xiaotuji.png") no-repeat;
+}
+#news-wrap div.news-tabs a em {
+  position: absolute;
+  width: 74px;
+  height: 33px;
+  background-color: #68d7fc;
+  border-radius: 20px;
+  top: 5px;
+  left: 0;
+  opacity: 0;
+  transform: translateY(20%);
+  transition: all 0.2s linear 0s;
+}
+#news-wrap div.news-tabs a i {
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 28px;
+  top: 3px;
+  right: -15px;
+  background: url("images/index_xiaotuji.png") no-repeat -1505px -101px;
+}
+#news-wrap div.news-tabs a.active em,
+#news-wrap div.news-tabs a:hover em {
+  opacity: 1;
+  transform: translateY(0);
+}
+#news-wrap div.news-tabs a.latest-1 > span {
+  background-position: -1399px -316px;
+}
+#news-wrap div.news-tabs a.news-2 > span {
+  background-position: -1465px -253px;
+}
+#news-wrap div.news-tabs a.notice-3 > span {
+  background-position: -1480px -284px;
+}
+#news-wrap div.news-tabs a.activity-4 > span {
+  background-position: -1352px -316px;
+}
+#news-wrap div.news-tabs a.media-5 > span {
+  background-position: -1434px -285px;
+}
+#news-wrap div.news-list {
+  background-color: #212121;
+  margin-top: 19px;
+  width: 500px;
+  height: 206px;
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+  /****切换动画样式*****/
+  /***当前图片左移动画***/
+  /*****下一张图片左移动画*****/
+  /****当前图片右移动画****/
+  /*****下一张图片右移动画*****/
+  /****下一个序号在当前页后面，当前左移****/
+  /*****下一张左移图片*****/
+  /***下一个序号在当前前面，当前右移动****/
+  /*****下一张右移的图片******/
+  /****切换动画样式结束*****/
+}
+#news-wrap div.news-list ul {
+  position: absolute;
+  background-color: #ffffff;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 205px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#news-wrap div.news-list ul li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 40px;
+  border-bottom: 1px dotted #000000;
+}
+#news-wrap div.news-list ul a {
+  color: #333;
+  width: 420px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#news-wrap div.news-list ul a:hover {
+  color: #c1831c;
+}
+#news-wrap div.news-list ul span {
+  width: 75px;
+  color: #bccddc;
+  font-size: 12px;
+}
+#news-wrap div.news-list ul.show {
+  display: flex;
+}
+@keyframes showlt {
+  0% {
+    transform: rotateY(0deg);
+    left: 0;
+  }
+  30% {
+    transform: rotateY(-20deg);
+    left: 0;
+  }
+  40% {
+    transform: rotateY(-20deg);
+    left: 0;
+  }
+  60% {
+    transform: rotateY(-20deg);
+    left: -550px;
+  }
+  70% {
+    transform: rotateY(-20deg);
+    left: -550px;
+  }
+  100% {
+    transform: rotateY(0deg);
+    left: -550px;
+  }
+}
+@keyframes moveLt {
+  0% {
+    transform: rotateY(0deg);
+    left: 550px;
+  }
+  30% {
+    transform: rotateY(-20deg);
+    left: 550px;
+  }
+  40% {
+    transform: rotateY(-20deg);
+    left: 550px;
+  }
+  60% {
+    transform: rotateY(-20deg);
+    left: 0;
+  }
+  70% {
+    transform: rotateY(-20deg);
+    left: 0;
+  }
+  100% {
+    transform: rotateY(0deg);
+    left: 0;
+  }
+}
+@keyframes showrt {
+  0% {
+    transform: rotateY(0deg);
+    left: 0;
+  }
+  30% {
+    transform: rotateY(20deg);
+    left: 0;
+  }
+  40% {
+    transform: rotateY(20deg);
+    left: 0;
+  }
+  60% {
+    transform: rotateY(20deg);
+    left: 550px;
+  }
+  70% {
+    transform: rotateY(20deg);
+    left: 550px;
+  }
+  100% {
+    transform: rotateY(0deg);
+    left: 550px;
+  }
+}
+@keyframes moveRt {
+  0% {
+    transform: rotateY(0deg);
+    left: -550px;
+  }
+  30% {
+    transform: rotateY(20deg);
+    left: -550px;
+  }
+  40% {
+    transform: rotateY(20deg);
+    left: -550px;
+  }
+  60% {
+    transform: rotateY(20deg);
+    left: 0;
+  }
+  70% {
+    transform: rotateY(20deg);
+    left: 0;
+  }
+  100% {
+    transform: rotateY(0deg);
+    left: 0;
+  }
+}
+#news-wrap div.news-list ul.show_lt {
+  transform-origin: 1050px 50%;
+  -webkit-animation: showlt 1s linear 0s 1 normal;
+  -o-animation: showlt 1s linear 0s 1 normal;
+  animation: showlt 1s linear 0s 1 normal;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#news-wrap div.news-list ul.lt {
+  display: flex;
+  left: 550px;
+  transform-origin: 100% 50%;
+  -webkit-animation: moveLt 1s linear 0s 1 normal;
+  -o-animation: moveLt 1s linear 0s 1 normal;
+  animation: moveLt 1s linear 0s 1 normal;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#news-wrap div.news-list ul.show_rt {
+  transform-origin: -550px 50%;
+  -webkit-animation: showrt 1s linear 0s 1 normal;
+  -o-animation: showrt 1s linear 0s 1 normal;
+  animation: showrt 1s linear 0s 1 normal;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#news-wrap div.news-list ul.rt {
+  display: flex;
+  left: -550px;
+  transform-origin: 0 50%;
+  -webkit-animation: moveRt 1s linear 0s 1 normal;
+  -o-animation: moveRt 1s linear 0s 1 normal;
+  animation: moveRt 1s linear 0s 1 normal;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/**************导航条公共样式，与攻略相同**********************/
+nav.intro-shishen-navbar,
+nav.strategy-content-nav {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  height: 96px;
+  margin: 0 auto;
+}
+nav.intro-shishen-navbar p,
+nav.strategy-content-nav p,
+nav.intro-shishen-navbar span,
+nav.strategy-content-nav span,
+nav.intro-shishen-navbar em,
+nav.strategy-content-nav em,
+nav.intro-shishen-navbar i,
+nav.strategy-content-nav i {
+  height: 96px;
+  background: url("images/index_xiaotuji.png") no-repeat;
+}
+nav.intro-shishen-navbar p,
+nav.strategy-content-nav p,
+nav.intro-shishen-navbar span.sperate-pot,
+nav.strategy-content-nav span.sperate-pot,
+nav.intro-shishen-navbar a,
+nav.strategy-content-nav a {
+  margin-right: 7px;
+}
+nav.intro-shishen-navbar p,
+nav.strategy-content-nav p {
+  width: 130px;
+  margin-top: 17px;
+  background-position: -639px -1258px;
+}
+nav.intro-shishen-navbar span.sperate-pot,
+nav.strategy-content-nav span.sperate-pot {
+  width: 45px;
+  height: 4px;
+  background-position: -1432px -95px;
+}
+nav.intro-shishen-navbar a,
+nav.strategy-content-nav a {
+  position: relative;
+  display: flex;
+  width: 96px;
+  height: 91px;
+  align-items: center;
+  justify-content: center;
+}
+nav.intro-shishen-navbar a i,
+nav.strategy-content-nav a i {
+  width: 70px;
+  height: 33px;
+  position: relative;
+  z-index: 101;
+}
+nav.intro-shishen-navbar a em,
+nav.strategy-content-nav a em {
+  position: absolute;
+  z-index: 100;
+  left: 0px;
+  bottom: -15px;
+  opacity: 0;
+  transition: bottom 0.3s linear 0s;
+  height: 91px;
+  width: 96px;
+  background-position: -633px -1002px;
+}
+nav.intro-shishen-navbar a:hover em,
+nav.strategy-content-nav a:hover em,
+nav.intro-shishen-navbar a.active em,
+nav.strategy-content-nav a.active em {
+  opacity: 1;
+  bottom: 0;
+}
+/**************导航条公共样式，与攻略相同结束**********************/
+#intro-shishen {
+  width: 100%;
+  position: relative;
+  height: 607px;
+  margin-top: 70px;
+  background: url("images/shishen/shishen-bg.jpg") no-repeat center top;
+  /*式神小图片内容*/
+}
+#intro-shishen a.shishen > i {
+  background-position: -1353px -251.5px;
+}
+#intro-shishen a.zhujue > i {
+  width: 64px;
+  height: 36px;
+  background-position: -1428px -181px;
+}
+#intro-shishen div.intro-container {
+  width: 1200px;
+  height: 460px;
+  margin: 50px auto;
+  position: relative;
+  /*式神内容左右箭头,相对width为1200px定位*/
+}
+#intro-shishen div.intro-container a.prev,
+#intro-shishen div.intro-container a.next {
+  display: block;
+  position: absolute;
+  width: 42px;
+  height: 32.9px;
+  top: 155px;
+  background: url("images/index_xiaotuji.png") no-repeat;
+}
+#intro-shishen div.intro-container a.prev {
+  left: -50px;
+  display: none;
+  background-position: -1424px -251px;
+}
+#intro-shishen div.intro-container a.prev.noPic {
+  background-position: -1468px -219px;
+}
+#intro-shishen div.intro-container a.next.noPic {
+  background-position: -1463px -101px;
+}
+#intro-shishen div.intro-container a.next {
+  right: 366px;
+  background-position: -1424px -218px;
+}
+#intro-shishen div.intro-container div.search-box {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+}
+#intro-shishen div.intro-container div.search-box input {
+  width: 320px;
+  height: 45px;
+  padding: 5px;
+  border: 1px solid #000000;
+  border-right: none;
+  outline: none;
+}
+#intro-shishen div.intro-container div.search-box a {
+  width: 58px;
+  height: 58px;
+  background: url("images/index_xiaotuji.png") no-repeat -127px -303px;
+}
+#intro-shishen div.intro-container div.search-box a:hover {
+  background-position: -186px -303px;
+}
+#intro-shishen div.shishen-navbar {
+  padding: 5px 10px;
+  border-bottom: 1px dotted #333;
+  display: flex;
+  align-items: center;
+}
+#intro-shishen div.shishen-navbar a {
+  font-family: "Microsoft JhengHei", 'Microsoft Yahei';
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 30px;
+  color: #000000;
+}
+#intro-shishen div.shishen-navbar a:hover,
+#intro-shishen div.shishen-navbar a.active {
+  color: #cea441;
+}
+#intro-shishen div.shishen-navbar a.viewAll {
+  display: inline-block;
+  height: 29px;
+  width: 131px;
+  background: url("images/shishen/viewAll.png") no-repeat center;
+}
+#intro-shishen div.intro-container-wrap {
+  width: 782px;
+  height: 210px;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#intro-shishen div.intro-shishen-items {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 782px;
+  height: 210px;
+  display: flex;
+  transition: all .5s;
+}
+#intro-shishen div.intro-shishen-items ul:not(:last-child) {
+  padding-right: 24px;
+  border-right: 1px solid #95a7a4;
+}
+#intro-shishen div.intro-shishen-items ul + ul {
+  margin-left: 24px;
+}
+#intro-shishen div.intro-shishen-items ul {
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+  justify-content: space-between;
+  padding: 10px 0;
+  width: 114px;
+}
+#intro-shishen div.intro-shishen-items ul a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 89px;
+  height: 92px;
+  background: url("images/index_xiaotuji.png") no-repeat -1307px -909px;
+}
+#intro-shishen div.intro-shishen-items ul a span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 101;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  width: 89px;
+  height: 92px;
+  background: url("images/shishen/shishen/mengban/mask.png") repeat;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.5s;
+}
+#intro-shishen div.intro-shishen-items ul a span em {
+  font-style: normal;
+  writing-mode: vertical-rl;
+  width: 18px;
+}
+#intro-shishen div.intro-shishen-items ul a:hover > span {
+  opacity: 1;
+}
+#intro-shishen div.intro-shishen-items ul img {
+  position: relative;
+  z-index: 99;
+  width: 82px;
+  height: 82px;
+}
+#intro-shishen div.intro-shishen-items ul i.icon-new {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 31px;
+  height: 36px;
+  background: url("images/shishen/new_icon.png") no-repeat;
+}
+#strategy {
+  width: 1200px;
+  height: 480px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /***定义鼠标移动到banner区动画效果，后期使用js选择或者删除此动画****/
+  /*导航栏样式引用742行的样式*/
+  /*导航条结束*/
+  /****攻略内容区域****/
+  /***攻略内容结束****/
+}
+@keyframes doudong {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#strategy div.strategy-banner-items.active a.system {
+  animation: doudong 0.5s ease 0s 1 normal;
+}
+#strategy div.strategy-banner-items.active a.mengXin {
+  animation: doudong 0.5s ease 111ms 1 normal;
+}
+#strategy div.strategy-banner-items.active a.xuanShang {
+  animation: doudong 0.5s ease 222ms 1 normal;
+}
+#strategy div.strategy-banner-items.active a.bigFoot {
+  animation: doudong 0.5s ease 333ms 1 normal;
+}
+#strategy aside.strategy-banner {
+  width: 375px;
+  height: 442px;
+  border: 1px solid #000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /**定义动画**/
+  /***广告图片***/
+  /***广告区域下文本***/
+  /***广告区域下文本结束***/
+}
+@keyframes strategy-lunbo {
+  0% {
+    transform: translateX(8px);
+  }
+  40% {
+    transform: translateX(8px);
+  }
+  60% {
+    transform: translateX(-368px);
+  }
+  100% {
+    transform: translateX(-368px);
+  }
+}
+#strategy aside.strategy-banner div.strategy-banner-lists {
+  width: 368px;
+  height: 228px;
+  transform: translateX(8px);
+  top: 0;
+  /**广告图片结束**/
+}
+#strategy aside.strategy-banner div.strategy-banner-lists a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all .8s;
+  opacity: 0;
+}
+#strategy aside.strategy-banner div.strategy-banner-lists a.active {
+  opacity: 1;
+}
+#strategy aside.strategy-banner div.strategy-banner-lists img {
+  width: 368px;
+  height: 228px;
+  /*清除空格*/
+  margin-right: -4px;
+}
+#strategy aside.strategy-banner div.strategy-nav-btn {
+  width: 375px;
+  display: flex;
+  justify-content: center;
+}
+#strategy aside.strategy-banner div.strategy-nav-btn i {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 4px solid #000000;
+  margin-right: 10px;
+  transition: background 0.5s;
+}
+#strategy aside.strategy-banner div.strategy-nav-btn i:hover,
+#strategy aside.strategy-banner div.strategy-nav-btn i.on {
+  background: #000000;
+}
+#strategy aside.strategy-banner div.strategy-banner-items {
+  display: flex;
+  height: 160px;
+  padding: 5px 0;
+  justify-content: space-between;
+}
+#strategy aside.strategy-banner div.strategy-banner-items a {
+  width: 94px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 35px;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+}
+#strategy aside.strategy-banner div.strategy-banner-items a:hover {
+  transform: translateY(-15px);
+}
+#strategy aside.strategy-banner div.strategy-banner-items a span,
+#strategy aside.strategy-banner div.strategy-banner-items a em {
+  height: 135px;
+  background: url("images/index_xiaotuji.png") no-repeat;
+}
+#strategy aside.strategy-banner div.strategy-banner-items a span {
+  width: 24px;
+}
+#strategy aside.strategy-banner div.strategy-banner-items a em {
+  width: 10px;
+  background-position: -952px -203px;
+}
+#strategy aside.strategy-banner div.strategy-banner-items a.system span {
+  background-position: -1022px -144px;
+}
+#strategy aside.strategy-banner div.strategy-banner-items a.mengXin span {
+  background-position: -1046px -144px;
+}
+#strategy aside.strategy-banner div.strategy-banner-items a.xuanShang span {
+  background-position: -1072px -144px;
+}
+#strategy aside.strategy-banner div.strategy-banner-items a.bigFoot span {
+  background-position: -1095px -144px;
+}
+#strategy nav.strategy-content-nav {
+  width: 790px;
+  margin-left: 33px;
+}
+#strategy nav.strategy-content-nav p {
+  width: 132px;
+  margin-top: -8px;
+  background-position: -809px -1000px;
+}
+#strategy nav.strategy-content-nav a.xinshou i {
+  height: 45px;
+  background-position: -1392px -102px;
+}
+#strategy nav.strategy-content-nav a.shishen i {
+  background-position: -1353px -219px;
+}
+#strategy nav.strategy-content-nav a.douji i {
+  width: 75px;
+  height: 40px;
+  background-position: -1353px -181px;
+}
+#strategy nav.strategy-content-nav a.wanfa i {
+  width: 82px;
+  height: 30px;
+  background-position: -1351px -285px;
+}
+#strategy div.strategy-content {
+  width: 790px;
+  margin-left: 33px;
+}
+#strategy div.strategy-content ul {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#strategy div.strategy-content ul li {
+  width: 360px;
+  height: 65px;
+  padding: 7px 30px 10px;
+  border-bottom: 1px dotted #000000;
+  position: relative;
+}
+#strategy div.strategy-content ul li a {
+  font-size: 14px;
+  color: #333;
+}
+#strategy div.strategy-content ul li a:hover span {
+  color: #c1831c;
+}
+#strategy div.strategy-content ul li i {
+  width: 0;
+  height: 0;
+  border-left: 9px solid #000000;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  position: absolute;
+  left: 0;
+  top: 19px;
+}
+#strategy div.strategy-content ul li span,
+#strategy div.strategy-content ul li p {
+  line-height: 28px;
+}
+#strategy div.strategy-content ul li span {
+  height: 22px;
+  display: inline-block;
+  width: 315px;
+  /****超出显示点点点****/
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#strategy div.strategy-content ul li p {
+  color: #b2afaf;
+}
+/****同人区域***/
+#tongren {
+  width: 1200px;
+  margin: 20px auto;
+  /****导航条*****/
+  /*****导航条结束****/
+  /****图片内容*****/
+}
+#tongren nav.tongren-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /****背景图片****/
+}
+#tongren nav.tongren-nav a.tongren-nav-name,
+#tongren nav.tongren-nav i {
+  background: url("images/index_xiaotuji.png") no-repeat;
+}
+#tongren nav.tongren-nav a.tongren-nav-name {
+  width: 115px;
+  height: 110px;
+  background-position: -1132px -400px;
+}
+#tongren nav.tongren-nav ul {
+  width: 933px;
+  height: 99px;
+  display: flex;
+  overflow: hidden;
+}
+#tongren nav.tongren-nav ul a:hover em,
+#tongren nav.tongren-nav ul li.active > a > em {
+  transform: translateY(17px);
+}
+#tongren nav.tongren-nav ul a:hover i,
+#tongren nav.tongren-nav ul li.active > a > i {
+  transform: translateY(6px);
+}
+#tongren nav.tongren-nav ul li {
+  width: 16.7%;
+  flex-grow: 1;
+  height: 99px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 2px solid #000000;
+  margin-right: -1px;
+}
+#tongren nav.tongren-nav ul li a {
+  display: flex;
+  width: 100%;
+  height: 73px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+#tongren nav.tongren-nav ul li i {
+  width: 74px;
+  height: 18px;
+  transform: translateY(26px);
+  transition: transform 0.5s ease 0s;
+}
+#tongren nav.tongren-nav ul li em {
+  width: 55px;
+  height: 55px;
+  background: url("images/tongren/nav-icon-1.png") no-repeat;
+  transform: translateY(66px);
+  transition: transform 0.5s ease 0s;
+}
+#tongren nav.tongren-nav ul li + li a {
+  border-left: 1px dotted #9f9f9f;
+}
+#tongren nav.tongren-nav ul li.jingxuan i {
+  background-position: -1351px -432px;
+}
+#tongren nav.tongren-nav ul li.jingxuan em {
+  background-position: -54px 0;
+}
+#tongren nav.tongren-nav ul li.huihua i {
+  background-position: -1352px -450px;
+}
+#tongren nav.tongren-nav ul li.huihua em {
+  background-position: -215px 0;
+}
+#tongren nav.tongren-nav ul li.cos i {
+  background-position: -1425px -415px;
+}
+#tongren nav.tongren-nav ul li.cos em {
+  background-position: -368px 0;
+}
+#tongren nav.tongren-nav ul li.movie i {
+  background-position: -1350px -414px;
+}
+#tongren nav.tongren-nav ul li.movie em {
+  background-position: -526px 0;
+}
+#tongren nav.tongren-nav ul li.novel i {
+  background-position: -1425px -433px;
+}
+#tongren nav.tongren-nav ul li.novel em {
+  width: 67px;
+  background-position: -673px 0;
+}
+#tongren nav.tongren-nav ul li.gaoshou i {
+  width: 112px;
+  height: 20px;
+  background-position: -1351px -393px;
+}
+#tongren nav.tongren-nav ul li.gaoshou em {
+  width: 66px;
+  background-position: -967px 0;
+}
+#tongren nav.tongren-nav div.tougao {
+  flex-grow: 1;
+  width: 11%;
+  height: 99px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #000000;
+}
+#tongren nav.tongren-nav div.tougao a {
+  width: 101px;
+  height: 24px;
+  background: url("images/index_xiaotuji.png") no-repeat;
+  background-position: -1353px -346px;
+  transform: translateX(0);
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+#tongren nav.tongren-nav div.tougao a:hover {
+  transform: translateX(20px);
+}
+#tongren div.tongren-items-wrap {
+  width: 100%;
+  margin-top: 45px;
+  /***不同内容公共排版样式***/
+  /****公共样式结束***/
+}
+#tongren div.tongren-items-wrap div.tongren-items {
+  width: 720px;
+}
+#tongren div.tongren-items-wrap div.items-lists:after {
+  content: "";
+  display: inline-block;
+  width: 285px;
+}
+#tongren div.tongren-items-wrap div.items-lists {
+  display: flex;
+  width: 1200px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /********翻转动画************/
+  /***********翻转动画结束*********/
+}
+#tongren div.tongren-items-wrap div.items-lists div.tongren-item {
+  position: relative;
+  margin-bottom: 10px;
+  width: 285px;
+  height: 205px;
+  perspective: 1000px;
+}
+#tongren div.tongren-items-wrap div.items-lists a.forward {
+  transform: rotateY(0deg);
+}
+#tongren div.tongren-items-wrap div.items-lists a.backward {
+  transform: rotateY(180deg);
+}
+#tongren div.tongren-items-wrap div.items-lists div.tongren-item.active > a.forward {
+  transform: rotateY(180deg);
+}
+#tongren div.tongren-items-wrap div.items-lists div.tongren-item.active > a.backward {
+  transform: rotateY(360deg);
+}
+#tongren div.tongren-items-wrap div.items-lists a {
+  transition: all .5s;
+  transform-origin: 50% 50%;
+  position: absolute;
+  width: 285px;
+  height: 205px;
+  backface-visibility: hidden;
+}
+#tongren div.tongren-items-wrap div.items-lists a img,
+#tongren div.tongren-items-wrap div.items-lists a span {
+  width: 285px;
+  height: 163px;
+}
+#tongren div.tongren-items-wrap div.items-lists a p {
+  color: #666;
+  height: 42px;
+  line-height: 42px;
+  /****超出显示...***/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#tongren div.tongren-items-wrap div.items-lists a span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background: url("images/shishen/shishen/mengban/mask.png") repeat;
+  transition: opacity 0.5s;
+}
+#tongren div.tongren-items-wrap div.items-lists a span em {
+  width: 79px;
+  height: 93px;
+  background: url("images/index_xiaotuji.png") no-repeat -552px -223px;
+}
+#tongren div.tongren-items-wrap div.items-lists a:hover span {
+  opacity: 1;
+}
+/****同人区域结束***/
+/****视频壁纸****/
+#shipin-bizhi {
+  width: 100%;
+  max-width: 1920px;
+  height: 514px;
+  display: flex;
+  justify-content: space-between;
+  background: url("images/shipinbizhi/video_bg.jpg") no-repeat 0 0;
+  /***视频,壁纸公共部分***/
+  /****视频部分结束****/
+}
+#shipin-bizhi section {
+  width: 1200px;
+  margin: 58px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#shipin-bizhi aside {
+  width: 580px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#shipin-bizhi aside a:first-child {
+  width: 227px;
+  height: 148px;
+  background: url("images/index_xiaotuji.png") no-repeat;
+}
+#shipin-bizhi aside a + a {
+  background-color: #ffffff;
+  width: 270px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #666;
+}
+#shipin-bizhi aside a + a img {
+  width: 100%;
+  height: 154px;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+#shipin-bizhi aside a + a p {
+  height: 45px;
+  line-height: 45px;
+  padding: 0 10px;
+  /*超出显示...*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#shipin-bizhi aside a:hover img {
+  transform: scale(1.1);
+}
+#shipin-bizhi aside.shipin a:first-child {
+  background-position: -777px -746px;
+}
+#shipin-bizhi aside.bizhi a + a {
+  background-color: transparent;
+}
+#shipin-bizhi aside.bizhi a:first-child {
+  background-position: -549px -746px;
+}
+/****视频壁纸结束****/
+/***活动专区,使用flex布局实现响应式***/
+#activity {
+  width: 1200px;
+  height: 380px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+}
+#activity aside {
+  width: 265px;
+  height: 370px;
+  background: url("images/huodong/activity_title.png") no-repeat;
+}
+#activity a {
+  width: 270px;
+  height: 153px;
+  position: relative;
+  overflow: hidden;
+}
+#activity a img {
+  width: 100%;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+#activity a span {
+  max-width: 100%;
+  border: 2px solid #ffffff;
+  padding: 3px 6px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#activity a:hover img {
+  transform: scale(1.1);
+}
+/***活动专区结束****/
+/***联系方式****/
+#contact {
+  width: 1200px;
+  display: flex;
+  margin: 80px auto;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+#contact a.contact-logo {
+  width: 70px;
+  height: 199px;
+  background: url("images/banner/logo_1.png") no-repeat;
+}
+#contact div.erweima {
+  width: 275px;
+  height: 240px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#contact div.erweima div {
+  display: flex;
+  align-items: flex-end;
+  height: 164px;
+}
+#contact div.erweima div p {
+  width: 27px;
+  height: 100px;
+  line-height: 17px;
+}
+#contact div.erweima div i {
+  width: 23px;
+  height: 100px;
+  background: url("images/index_xiaotuji.png") no-repeat -1324px -620px;
+}
+#contact div.erweima img {
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+  box-sizing: initial;
+  width: 132px;
+  height: 132px;
+  padding: 16px;
+  border: 1px solid #ccc;
+}
+#contact div.erweima em {
+  margin-top: 5px;
+  width: 52px;
+  height: 2px;
+  border: 1px solid #d1d1d1;
+}
+#contact div.erweima a {
+  color: #000;
+  width: 100%;
+}
+#contact div.erweima a span {
+  color: #d2c199;
+}
+#contact div.contact-weixin div p,
+#contact div.contact-weixin div i {
+  height: 120px;
+}
+#contact div.contact-weixin div i {
+  background-position: -1305px -145px;
+}
+#contact div.contact-server {
+  width: 210px;
+}
+#contact div.contact-server h1 {
+  width: 111px;
+  height: 109px;
+  background: url("images/index_xiaotuji.png") no-repeat -1022px -403px;
+}
+#contact div.contact-server p {
+  line-height: 22px;
+  width: 100%;
+}
+#contact div.contact-server p.tel-num {
+  font-family: Georgia, "Microsoft Yahei";
+  font-size: 20px;
+  margin-top: -20px;
+}
+#contact div.contact-server span {
+  width: 100%;
+}
+#contact div.contact-server span a {
+  color: #d2c199;
+}
+#contact div.contact-server span a:hover {
+  text-decoration: underline;
+}
+#contact a.to-top {
+  position: absolute;
+  right: -20px;
+  bottom: 80px;
+  width: 25px;
+  height: 111px;
+  background: url("images/index_xiaotuji.png") no-repeat -1115px -283px;
+  transform: translateY(0);
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+}
+#contact a.to-top:hover {
+  transform: translateY(-20px);
+}
+/***联系方式结束***/
+/***游戏下载二维码***/
+#downLoad {
+  margin: 50px 0;
+  width: 100%;
+  max-width: 1920px;
+  background: url("images/xiazaierweima/foot_bg.jpg") no-repeat 0 0;
+  height: 524px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+#downLoad h1,
+#downLoad h2,
+#downLoad h4,
+#downLoad p,
+#downLoad em {
+  background: url("images/index_xiaotuji.png") no-repeat;
+}
+#downLoad h1 {
+  margin-top: 40px;
+  height: 30px;
+  width: 600px;
+  background-position: 0 -1342px;
+}
+#downLoad h2 {
+  height: 21.5px;
+  width: 120px;
+  background-position: -1349px -371px;
+}
+#downLoad a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#downLoad a div {
+  width: 200px;
+  height: 152px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.5s;
+}
+#downLoad a div img {
+  width: 152px;
+  height: 152px;
+}
+#downLoad a div p {
+  width: 16px;
+  height: 150px;
+  background-position: -962px -189px;
+}
+#downLoad a em {
+  background-position: -458px 0;
+  width: 240px;
+  height: 223px;
+  transform: translateY(0);
+  transition: transform 0.5s;
+}
+#downLoad a:hover > div,
+#downLoad a.active > div {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+#downLoad a:hover > em,
+#downLoad a.active > em {
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -o-transform: translateY(20px);
+  transform: translateY(20px);
+}
+/***游戏下载二维码结束***/

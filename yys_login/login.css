@@ -1,0 +1,449 @@
+/****公共样式***/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serifsans-serif;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+/***公共样式结束****/
+/******头部导航栏*****/
+#top {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(192, 233, 233, 0.3);
+}
+#top div {
+  width: 980px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#top ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 650px;
+  height: 70px;
+  margin: 0 20px;
+}
+#top ul li {
+  position: relative;
+  width: 70px;
+  height: 100%;
+  line-height: 70px;
+}
+#top ul li a {
+  left: 0;
+  top: 0;
+  position: absolute;
+  color: #222;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+#top ul li a.back {
+  width: 0;
+  height: 100%;
+  color: #d2c199;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width .3s;
+}
+#top ul li:hover a.back {
+  width: 100%;
+}
+#top ul li.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+#top ul li.logo img {
+  width: 40px;
+}
+#top p {
+  width: 100px;
+}
+#top a {
+  color: #222;
+  text-decoration: none;
+}
+/*****头部导航模块结束***/
+/*****登录部分开始****/
+/*****外层背景*****/
+#login {
+  width: 100%;
+  min-width: 980px;
+  height: 440px;
+  background: url("img/login_bg.jpg") no-repeat center bottom;
+  background-size: 1920px 524px;
+}
+/*****外层背景结束*****/
+/*****wrap层决定宽度******/
+#login > div.login_wrap {
+  padding-top: 20px;
+  width: 980px;
+  height: 340px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  /*****顶部登录logo****/
+  /*****顶部登录logo结束*****/
+}
+#login > div.login_wrap div.line {
+  width: 410px;
+  height: 22px;
+  border-bottom: 2px solid #fadde2;
+}
+#login > div.login_wrap img.login_pic {
+  width: 77px;
+  height: 37px;
+}
+/*****wrap层结束*****/
+#login aside {
+  width: 480px;
+  height: 340px;
+  margin-top: 20px;
+}
+/*****左侧二维码登录区域********/
+#login aside.login_erweima {
+  position: relative;
+}
+#login aside.login_erweima div.qr_code {
+  left: 160px;
+  top: 100px;
+  position: absolute;
+  width: 200px;
+  height: 230px;
+  opacity: 0;
+  transition: all .5s ease .2s;
+}
+#login aside.login_erweima div.qr_code img {
+  width: 200px;
+  height: 200px;
+}
+#login aside.login_erweima div.qr_code_pic {
+  position: absolute;
+  right: 30px;
+  bottom: -44px;
+  height: 400px;
+  width: 300px;
+  transition: all .5s ease .2s;
+}
+#login aside.login_erweima div.qr_code_pic img {
+  width: 100%;
+}
+#login aside.login_erweima p.qr_code_title {
+  text-align: center;
+  height: 30px;
+  width: 100%;
+  font-size: 18px;
+  color: #222;
+  letter-spacing: 3px;
+}
+#login aside.login_erweima:hover div.qr_code,
+#login aside.login_erweima.active div.qr_code {
+  opacity: 1;
+  transform: translateX(-100px);
+}
+#login aside.login_erweima:hover div.qr_code_pic,
+#login aside.login_erweima.active div.qr_code_pic {
+  transform: translateX(65px);
+}
+/*****左侧区域结束*****/
+/*****右侧登录模块*****/
+#login aside.login_input > p.succ {
+  margin-top: 50px;
+  padding-left: 10px;
+  display: none;
+  font-size: 18px;
+}
+#login aside.login_input ul {
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  padding: 20px;
+  /****忘记密码****/
+  /*****忘记密码结束****/
+  /*****验证码*****/
+  /*****验证码结束*****/
+  /*****记住我*****/
+  /*****记住我结束*****/
+  /*****按钮******/
+  /******按钮结束*****/
+  /******其他登录方式*****/
+  /*****其他登录方式结束******/
+}
+#login aside.login_input ul li {
+  width: 400px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+#login aside.login_input ul li label {
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  color: #222;
+}
+#login aside.login_input ul li input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  outline-color: #00bee7;
+  border: 1px solid #ddd;
+}
+#login aside.login_input ul li a {
+  text-decoration: none;
+}
+#login aside.login_input ul li i {
+  display: none;
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  right: -125px;
+  background: url("img/icons.png") no-repeat;
+  padding-left: 25px;
+  line-height: 40px;
+  font-style: normal;
+}
+#login aside.login_input ul li i.cha {
+  display: block;
+  background-position: 0 -316px;
+  color: #e4393c;
+}
+#login aside.login_input ul li i.gou {
+  display: block;
+  background-position: 0 -349px;
+  color: #2cc06f;
+}
+#login aside.login_input ul li.forget {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0;
+  height: 20px;
+}
+#login aside.login_input ul li.forget a {
+  line-height: 20px;
+  color: #00A0D8;
+}
+#login aside.login_input ul li.forget a:hover {
+  color: #e4393c;
+}
+#login aside.login_input ul li.check label {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 200px;
+}
+#login aside.login_input ul li.check label span {
+  width: 60px;
+}
+#login aside.login_input ul li.check label input {
+  width: 140px;
+  flex-grow: 0;
+}
+#login aside.login_input ul li.check > span {
+  display: none;
+  margin-left: 10px;
+  width: 140px;
+  height: 40px;
+}
+#login aside.login_input ul li.check > span img {
+  width: 100%;
+  height: 40px;
+}
+#login aside.login_input ul li.check p {
+  display: none;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #00A0D8;
+  cursor: pointer;
+  margin-left: 10px;
+}
+#login aside.login_input ul li.remember {
+  height: 20px;
+}
+#login aside.login_input ul li.remember label {
+  width: 100px;
+}
+#login aside.login_input ul li.remember label em {
+  font-style: normal;
+  color: #222;
+}
+#login aside.login_input ul li.remember span {
+  flex-grow: 1;
+  color: #bbb;
+  font-weight: 400;
+}
+#login aside.login_input ul li.btn input,
+#login aside.login_input ul li.btn a {
+  flex-grow: 0;
+  width: 184px;
+  height: 38px;
+  border-radius: 2px;
+  outline-color: transparent;
+  color: #FFFFFF;
+  font-weight: bold;
+  cursor: pointer;
+}
+#login aside.login_input ul li.btn a {
+  text-align: center;
+  line-height: 38px;
+}
+#login aside.login_input ul li.btn input.btn_login {
+  background-color: #00A7DE;
+  border: 1px solid #0381AA;
+}
+#login aside.login_input ul li.btn input.btn_login:hover {
+  background-color: #00bee7;
+}
+#login aside.login_input ul li.btn a.btn_reg {
+  color: #555;
+  background-color: #FFFFFF;
+  border: 1px solid #ccc;
+}
+#login aside.login_input ul li.ot_login {
+  justify-content: flex-start;
+}
+#login aside.login_input ul li.ot_login a {
+  color: #222;
+  display: flex;
+  height: 24px;
+  align-items: center;
+  width: 150px;
+  margin-right: 20px;
+}
+#login aside.login_input ul li.ot_login a em {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("img/snsicon.png") no-repeat;
+  margin-right: 10px;
+}
+#login aside.login_input ul li.ot_login a.login_weibo em {
+  background-position: 0 0;
+}
+#login aside.login_input ul li.ot_login a.login_qq em {
+  background-position: 0 -40px;
+}
+#login aside.login_input span.err {
+  bottom: -20px;
+  left: 25px;
+  width: 150px;
+  height: 40px;
+  color: #e4393c;
+  font-size: 16px;
+  position: absolute;
+  display: none;
+}
+/*****右侧登录模块结束****/
+/*****登录部分结束*****/
+/*****底部*****/
+#footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  min-width: 980px;
+}
+#footer ul.footer_wrap {
+  margin: 0 auto;
+  width: 980px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#footer ul.footer_wrap li:not(:last-child) {
+  border-right: 1px solid #e5e9ef;
+  margin-right: 10px;
+}
+#footer ul.footer_wrap li {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#footer ul.footer_wrap li p {
+  width: 100%;
+  color: #717171;
+}
+#footer ul.footer_wrap li.tips a {
+  width: 100px;
+  margin: 10px 0;
+}
+#footer ul.footer_wrap li.pic {
+  align-items: center;
+}
+#footer ul.footer_wrap li.pic a {
+  width: 60px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+#footer ul.footer_wrap li.pic a div {
+  position: absolute;
+  bottom: 110px;
+  left: -21px;
+  width: 100px;
+  height: 0;
+  opacity: 0;
+  transition: all .3s;
+  overflow: hidden;
+}
+#footer ul.footer_wrap li.pic a div img {
+  width: 100px;
+  height: 100px;
+}
+#footer ul.footer_wrap li.pic em {
+  width: 56px;
+  height: 56px;
+  background: url("img/icons.png") no-repeat;
+}
+#footer ul.footer_wrap li.pic span {
+  color: #222;
+}
+#footer ul.footer_wrap li.pic a:hover div {
+  height: 100px;
+  opacity: 1;
+  bottom: 110px;
+}
+#footer ul.footer_wrap li.pic a:nth-child(3) em {
+  background-position: 0 0;
+}
+#footer ul.footer_wrap li.pic a:nth-child(3):hover em {
+  background-position: -66px 0;
+}
+#footer ul.footer_wrap li.pic a:nth-child(1) em {
+  background-position: 0 -128px;
+}
+#footer ul.footer_wrap li.pic a:nth-child(1):hover em {
+  background-position: -66px -128px;
+}
+#footer ul.footer_wrap li.pic a:nth-child(2) em {
+  background-position: 0 -256px;
+}
+#footer ul.footer_wrap li.pic a:nth-child(2):hover em {
+  background-position: -66px -256px;
+}
+/******底部结束******/

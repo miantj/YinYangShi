@@ -1,0 +1,322 @@
+/****公共样式***/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serifsans-serif;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+/***公共样式结束****/
+/******头部导航栏*****/
+#top {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(192, 233, 233, 0.3);
+}
+#top div {
+  width: 980px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#top ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 650px;
+  height: 70px;
+  margin: 0 20px;
+}
+#top ul li {
+  position: relative;
+  width: 70px;
+  height: 100%;
+  line-height: 70px;
+}
+#top ul li a {
+  left: 0;
+  top: 0;
+  position: absolute;
+  color: #222;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+#top ul li a.back {
+  width: 0;
+  height: 100%;
+  color: #d2c199;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width .3s;
+}
+#top ul li:hover a.back {
+  width: 100%;
+}
+#top ul li.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+#top ul li.logo img {
+  width: 40px;
+}
+#top p {
+  width: 100px;
+}
+#top a {
+  color: #222;
+  text-decoration: none;
+}
+/*****头部导航模块结束***/
+/*****注册部分开始****/
+/*****外层背景*****/
+#reg {
+  width: 100%;
+  min-width: 980px;
+  height: 440px;
+  background: url("img/login_bg.jpg") no-repeat center bottom;
+  background-size: 1920px 524px;
+}
+/*****外层背景结束*****/
+/*****wrap层决定宽度******/
+#reg > div.reg_wrap {
+  padding-top: 20px;
+  width: 980px;
+  height: 440px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  /*****顶部注册logo****/
+  /*****顶部注册ogo结束*****/
+}
+#reg > div.reg_wrap div.line {
+  width: 410px;
+  height: 22px;
+  border-bottom: 2px solid #fadde2;
+}
+#reg > div.reg_wrap img.reg_pic {
+  width: 77px;
+  height: 37px;
+}
+#reg > div.reg_wrap > p.succ {
+  margin-top: 50px;
+  padding-left: 10px;
+  display: none;
+  font-size: 18px;
+}
+#reg > div.reg_wrap ul.reg_input {
+  margin: 20px auto;
+  width: 470px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+#reg > div.reg_wrap ul.reg_input input {
+  width: 400px;
+  height: 40px;
+  outline-color: #00bee7;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+#reg > div.reg_wrap ul.reg_input li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+#reg > div.reg_wrap ul.reg_input li label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+#reg > div.reg_wrap ul.reg_input li label span {
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  font-size: 14px;
+}
+#reg > div.reg_wrap ul.reg_input li i {
+  display: none;
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  right: -125px;
+  background: url("img/icons.png") no-repeat;
+  padding-left: 25px;
+  line-height: 40px;
+  font-style: normal;
+}
+#reg > div.reg_wrap ul.reg_input li i.cha {
+  display: block;
+  background-position: 0 -316px;
+  color: #e4393c;
+}
+#reg > div.reg_wrap ul.reg_input li i.gou {
+  display: block;
+  background-position: 0 -349px;
+  color: #2cc06f;
+}
+#reg > div.reg_wrap ul.reg_input li.check_num label {
+  width: 240px;
+}
+#reg > div.reg_wrap ul.reg_input li.check_num label input {
+  width: 170px;
+}
+#reg > div.reg_wrap ul.reg_input li.check_num em {
+  width: 140px;
+  height: 40px;
+}
+#reg > div.reg_wrap ul.reg_input li.check_num em img {
+  width: 140px;
+  height: 40px;
+}
+#reg > div.reg_wrap ul.reg_input li.check_num p {
+  width: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+#reg > div.reg_wrap ul.reg_input li.gree label {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+#reg > div.reg_wrap ul.reg_input li.gree label input {
+  height: 14px;
+  width: 25px;
+}
+#reg > div.reg_wrap ul.reg_input li.gree label a {
+  color: #35a3d6;
+}
+#reg > div.reg_wrap ul.reg_input li.gree label a:hover {
+  color: #F35C8F;
+}
+#reg > div.reg_wrap ul.reg_input li.btn_reg input {
+  width: 100%;
+  background-color: #FFFFFF;
+  outline-color: transparent;
+  color: #233;
+  font-weight: bold;
+}
+#reg > div.reg_wrap ul.reg_input li.btn_reg input:hover {
+  background-color: #faf3e9;
+}
+#reg > div.reg_wrap ul.reg_input li.login {
+  flex-direction: row-reverse;
+}
+#reg > div.reg_wrap ul.reg_input li.login a {
+  color: #00a3d5;
+  width: 120px;
+}
+#reg > div.reg_wrap ul.reg_input li.login a:hover {
+  color: #F35C8F;
+}
+/*****wrap层结束*****/
+/*****注册部分结束*****/
+/*****底部*****/
+#footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  min-width: 980px;
+}
+#footer ul.footer_wrap {
+  margin: 0 auto;
+  width: 980px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#footer ul.footer_wrap li:not(:last-child) {
+  border-right: 1px solid #e5e9ef;
+  margin-right: 10px;
+}
+#footer ul.footer_wrap li {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#footer ul.footer_wrap li p {
+  width: 100%;
+  color: #717171;
+}
+#footer ul.footer_wrap li.tips a {
+  width: 100px;
+  margin: 10px 0;
+}
+#footer ul.footer_wrap li.pic {
+  align-items: center;
+}
+#footer ul.footer_wrap li.pic a {
+  width: 60px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+#footer ul.footer_wrap li.pic a div {
+  position: absolute;
+  bottom: 110px;
+  left: -21px;
+  width: 100px;
+  height: 0;
+  opacity: 0;
+  transition: all .3s;
+  overflow: hidden;
+}
+#footer ul.footer_wrap li.pic a div img {
+  width: 100px;
+  height: 100px;
+}
+#footer ul.footer_wrap li.pic em {
+  width: 56px;
+  height: 56px;
+  background: url("img/icons.png") no-repeat;
+}
+#footer ul.footer_wrap li.pic span {
+  color: #222;
+}
+#footer ul.footer_wrap li.pic a:hover div {
+  height: 100px;
+  opacity: 1;
+  bottom: 110px;
+}
+#footer ul.footer_wrap li.pic a:nth-child(3) em {
+  background-position: 0 0;
+}
+#footer ul.footer_wrap li.pic a:nth-child(3):hover em {
+  background-position: -66px 0;
+}
+#footer ul.footer_wrap li.pic a:nth-child(1) em {
+  background-position: 0 -128px;
+}
+#footer ul.footer_wrap li.pic a:nth-child(1):hover em {
+  background-position: -66px -128px;
+}
+#footer ul.footer_wrap li.pic a:nth-child(2) em {
+  background-position: 0 -256px;
+}
+#footer ul.footer_wrap li.pic a:nth-child(2):hover em {
+  background-position: -66px -256px;
+}
+/******底部结束******/

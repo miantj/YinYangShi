@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>阴阳师</title>
+    <link rel="stylesheet" href="yys-less-1.0.css"/>
+    <link rel="stylesheet" href="CSS/addNews.css">
+    <script src="js/func.js"></script>
+    <script src="js/jiaose.js"></script>
+
+    <style type="text/css">
+        @media screen and (max-width: 1440px) {
+            #top div.download-wrap.to-rt-sm {
+                right: 0;
+                margin-right: 0;
+            }
+
+            /*隐藏日历*/
+            .visible-xlg {
+                display: none;
+            }
+
+            #left-news.visible-lg {
+                width: 970px;
+            }
+
+            #left-news.visible-lg div.news-banner {
+                margin-left: 0;
+            }
+
+            /*式神区域改变*/
+            /*居中，宽度改变*/
+            #intro-shishen div.visible-lg, #intro-shishen nav.visible-lg {
+                width: 970px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /*右箭头重新定位*/
+            #intro-shishen div.visible-lg a.next {
+                right: -16px;
+            }
+
+            /*增加式神内容显示数量*/
+            #intro-shishen div.intro-container-wrap {
+                width: 970px;
+            }
+
+            #intro-shishen div.intro-container-wrap ul + ul {
+                margin-left: 29px;
+            }
+
+            #intro-shishen div.intro-container-wrap ul {
+                padding-right: 29px;
+            }
+
+            /*式神区域改变结束*/
+            /*攻略区域*/
+            /*纵向排列*/
+            #strategy {
+                width: 970px;
+                flex-direction: row;
+                height: auto;
+            }
+
+            /*重新排序*/
+            #strategy aside.strategy-banner {
+                order: 2;
+                margin-top: 20px;
+            }
+
+            #strategy nav.strategy-content-nav {
+                order: 1;
+                width: 970px;
+            }
+
+            /*更改尺寸，隐藏内容*/
+            #strategy div.strategy-content {
+                order: 3;
+                width: 560px;
+                height: 442px;
+                overflow-y: scroll;
+            }
+
+            #strategy div.strategy-content ul > li {
+                width: 520px;
+            }
+
+            /*攻略区内容结束*/
+            /*同人区域*/
+            #tongren {
+                width: 970px;
+            }
+
+            #tongren nav.tongren-nav ul {
+                width: 740px;
+            }
+
+            #tongren div.tongren-items-wrap div.items-lists {
+                width: 970px;
+            }
+
+            /*同人区域结束*/
+            /**视频壁纸区域**/
+            #shipin-bizhi section {
+                width: 970px;
+            }
+
+            #shipin-bizhi aside {
+                width: 100%;
+            }
+
+            #shipin-bizhi aside > a:first-child {
+                width: 165px;
+            }
+
+            #shipin-bizhi aside a + a {
+                width: 245px;
+            }
+
+            /**视频壁纸结束**/
+            /**活动区***/
+            #activity {
+                width: 970px;
+            }
+
+            #activity aside {
+                height: 140px;
+            }
+
+            /***活动区结束***/
+            /***联系方式***/
+            #contact {
+                width: 970px;
+            }
+
+            #contact a.to-top {
+                display: none;
+            }
+
+            /***联系方式结束***/
+            /***二维码下载****/
+            /*#downLoad{*/
+            /*width: 970px;*/
+            /*}*/
+            /***二维码下载结束***/
+
+        }
+    </style>
+
+</head>
+<body>
+<div id="main">
+    <!--1、导航栏和banner-->
+    <header id="top">
+        <!--导航，缺动画-->
+        <div class="nav-bar">
+
+            <ul class="clear">
+                <li>
+                    <a href="#">
+                    </a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#top" data-toggle="jump">官方首页</a>
+                    <span>/</span>
+                </li>
+                <li>
+                    <a href="#left-news" data-toggle="jump">
+                        新闻资讯
+                    </a>
+                    <span>/</span>
+                </li>
+                <li>
+                    <a href="#intro-shishen" data-toggle="jump">
+                        游戏特色
+                    </a>
+                    <span>/</span>
+                </li>
+                <li>
+                    <a href="#strategy" data-toggle="jump">
+                        游戏攻略
+                    </a>
+                    <span>/</span>
+                </li>
+                <li>
+                    <a href="#tongren" data-toggle="jump">
+                        同人专区
+                    </a>
+                    <span>/</span>
+                </li>
+                <li class="btn_login">
+                    <a href="yys_login/login.html" target="_self">
+                        登录
+                    </a>
+                    <span>/</span>
+                </li>
+                <li>
+                    <a href="yys_reg/reg.html" target="_self">
+                        注册
+                    </a>
+                    <span></span>
+                </li>
+            </ul>
+            <div class="user_info">
+                <div class="user_panel">
+                    <p class="user_name"></p>
+                    <p style="color: #e4393c;display: none;text-align: center" class="vip">高贵的会员</p>
+                    <div class="lv_info clear">
+                        <span class="lv_text f_left">等级</span>
+                        <div class="lv_bar f_left">
+                            <div class="lv_bar_wrap f_left">
+                                <div class="lv_bar_bg"></div>
+                                <div class="lv_bar_info"></div>
+                            </div>
+                            <div class="lv f_left"></div>
+                        </div>
+                        <div class="lv_num f_right">
+                            <span>5695</span>/10800
+                        </div>
+                    </div>
+                    <ul class="user_list clear">
+                        <li class="user_center">
+                            <i></i><span>个人中心</span>
+                        </li>
+                        <li class="user_straw">
+                            <i></i><span>我的投稿</span>
+                        </li>
+                        <li class="user_rich">
+                            <i></i><span>我的财富</span>
+                        </li>
+                        <li class="user_video">
+                            <i></i><span>我的视频</span>
+                        </li>
+                    </ul>
+                    <div class="user_exit">
+                        <a href="#">退出</a>
+                    </div>
+                </div>
+                <div class="user_header_wrap">
+                    <div class="user_header">
+                        <img src="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--logo-->
+        <div class="logo">
+            <a href="#"></a>
+        </div>
+        <!--logo结束-->
+        <div class="banner">
+            <!--角色切换部分-->
+            <div class="banner-jiaose">
+                <div class="banner-jiaose-1">
+                    <span class="r1">
+                    <img class="r2-img1" src="images/banner/qingming.png" alt="qinming" onload="img_load()"/>
+                </span>
+                    <span class="r2">
+                    <img class="r1-img1" src="images/banner/shenle.png" alt="shenle" onload="img_load()"/>
+                </span>
+                </div>
+                <div class="banner-jiaose-2">
+                    <span class="r1">
+                        <img class="r2-img1" src="images/banner/babaibi.png" alt="babaibi" onload="img_load()"/>
+                    </span>
+                    <span class="r2">
+                    <img class="r1-img1" src="images/banner/bowangyuan.png" alt="bowangyuan" onload="img_load()"/>
+                    </span>
+                </div>
+                <i class="qiehuan"></i>
+            </div>
+        </div>
+        <!--角色切换部分结束-->
+        <!--左下gif-->
+        <div class="zuoxia-gif">
+            <a href="#">
+                <img src="images/banner/banner-shantu-gif.gif" alt="shantu" title="萌萌的小山兔"/>
+            </a>
+        </div>
+        <!--底部下载模块,小于1200px大于768px帖右to-rt-sm-->
+        <div class="download-wrap to-rt-sm">
+            <a class="download-close" href="#"></a>
+            <b class="download-text"></b>
+
+            <div class="download-erweima">
+                <!--二维码-->
+                <img class="download-erweima-img" src="images/banner/download/erweima.png" alt="erweima"
+                     width="100%"/>
+                <!--滑动横杆-->
+                <img class="download-img" src="images/banner/download/line_download.png" alt="line"/>
+            </div>
+            <div class="download-button">
+                <a href="#" class="button-ios"></a>
+                <a href="#" class="button-android"></a>
+            </div>
+        </div>
+    </header>
+    <!--导航栏和banner结束-->
+
+    <!--2、左侧新闻公告和平安之旅导航条  小于1200大于768width为750（待定）-->
+    <div id="left-news" class="visible-lg">
+        <!--左侧广告-->
+        <div class="news-banner">
+            <div class="news-banner-wrap">
+                <a href="" class="banner-items show">
+                    <img src="images/news/news-banner1.jpg" alt="">
+                </a>
+                <a href="" class="banner-items">
+                    <img src="images/news/news-banner2.jpg" alt="">
+                </a>
+                <a href="" class="banner-items">
+                    <img src="images/news/news-banner3.jpg" alt="">
+                </a>
+                <a href="" class="banner-items">
+                    <img src="images/news/news-banner4.jpg" alt="">
+                </a>
+                <a href="" class="banner-items">
+                    <img src="images/news/news-banner5.jpg" alt="">
+                </a>
+                <a href="" class="banner-items">
+                    <img src="images/news/news-banner6.jpg" alt="">
+                </a>
+            </div>
+            <div class="news-banner-nav">
+                <a href="#0" class="on"></a>
+                <a href="#1" class=""></a>
+                <a href="#2" class=""></a>
+                <a href="#3" class=""></a>
+                <a href="#4" class=""></a>
+                <a href="#5" class=""></a>
+            </div>
+        </div>
+        <!--左侧广告结束-->
+        <!--新闻条-->
+        <div id="news-wrap">
+            <!--新闻导航条-->
+            <div class="news-tabs">
+                <a href="#" class="latest-1 active">
+                    <em></em>
+                    <span></span>
+                    <i></i>
+                </a>
+                <a href="#" class="news-2">
+                    <em></em>
+                    <span></span>
+                    <i></i>
+                </a>
+                <a href="#" class="notice-3">
+                    <em></em>
+                    <span></span>
+                    <i></i>
+                </a>
+                <a href="#" class="activity-4">
+                    <em></em>
+                    <span></span>
+                    <i></i>
+                </a>
+                <a href="#" class="media-5">
+                    <em></em>
+                    <span></span>
+                </a>
+            </div>
+            <!--新闻列表-->
+            <div class="news-list">
+                <ul class="latest-items show">
+
+                </ul>
+                <!--新闻-->
+                <ul class="news-items">
+
+                </ul>
+                <ul class="notice-items">
+
+                </ul>
+                <ul class="activity-items">
+
+                </ul>
+                <ul class="media-items">
+
+                </ul>
+                <!--新闻结束-->
+            </div>
+        </div>
+        <!--新闻条结束-->
+    </div>
+    <!--左侧新闻公告结束-->
+    <!--3、右侧游戏日历  大于1200显示-->
+    <div id="right_game_rili" class="visible-xlg">
+        <em class="lf-caret"></em>
+
+        <p class="rili-title"></p>
+        <ul class="rili-list">
+            <li class="douji">
+                <a href="#">
+                    <span>斗技,每日12:00-13:00,21:00-22:00<br>
+协同斗技,每周六日14:00-15:30</span>
+                </a>
+            </li>
+            <li class="nianshou">
+                <a href="#">
+                    <span>
+                        通关探索副本概率开启,随机<br>
+获得金币,达摩碎片,达摩
+                    </span>
+                </a>
+            </li>
+            <li class="shiju">
+                <a href="#">
+                    <span>妖气封印发现，CD1小时</span>
+                </a>
+            </li>
+            <li class="shoulie">
+                <a href="#">
+                    <span>
+                        周一至周四鬼王，周五-周日阴界之门，时间19-21点
+                    </span>
+                </a>
+            </li>
+            <li class="xuanshang">
+                <a href="#">
+                    <span>
+                        每日5点和18点重置
+                    </span>
+                </a>
+            </li>
+            <li class="tupo">
+                <a href="#">
+                    <span>
+                        个人每周一6点重置，阴阳寮每日5点重置，周六日奖励翻倍
+                    </span>
+                </a>
+            </li>
+            <li class="fuben">
+                <a href="#">
+                    <!--折叠副本-->
+                    <span class="curDate">【周五】日女巳时、镜姬、钟灵、破势</span>
+                    <!--展开副本-->
+                    <div class="fuben-h">
+                        <span class="curDate">【周五】日女巳时、镜姬、钟灵、破势</span>
+
+                        <div class="fuben-items">
+                            <span>【周一】雪幽魂、地藏像、鸣屋、网切</span>
+                            <span>【周二】涅槃之火、三味、招财猫、狰</span>
+                            <span>【周三】 魍魉之匣、被服、阴摩罗、魅妖</span>
+                            <span>【周四】反枕、心眼、树妖、针女</span>
+                            <span>【周五】日女巳时、镜姬、钟灵、破势</span>
+                            <span>【周六】随机掉落全部御魂</span>
+                            <span>【周日】随机掉落全部御魂</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="yeyuanhuo">
+                <a href="#">
+                    <span>
+                        御魂副本获得入场卷，副本产出新御魂「木魅」「薙魂」「返魂香」
+                    </span>
+                </a>
+            </li>
+            <li class="damo">
+                <a href="#" class="weibo"></a>
+                <a href="#" class="weixin"></a>
+                <a href="#" class="luntan"></a>
+            </li>
+        </ul>
+    </div>
+    <!--右侧游戏日历结束-->
+
+    <!--测试添加新闻模块-->
+    <div id="addNews">
+        <div class="wrap">
+            <select id="newsType">
+                <option value="0" selected>--请选择新闻类型--</option>
+                <option value="1" >新闻</option>
+                <option value="2" >公告</option>
+                <option value="3" >活动</option>
+                <option value="4" >媒体</option>
+                <!--查表获得-->
+            </select>
+            <input type="text" placeholder="请输入新闻标题(仅用于测试)" id="newsTitle">
+            <input type="button" id="newsSubmit" value="提交">
+            <input type="button" id="newsFresh" value="刷新">
+        </div>
+    </div>
+    <!--测试添加新闻模块结束-->
+    <script src="js/getNews.js"></script>
+    <!--4、式神主角介绍-->
+    <div id="intro-shishen">
+        <!--平安之旅导航条-->
+        <nav class="intro-shishen-navbar visible-lg">
+            <p class="tab-name-pingan"></p>
+            <span class="sperate-pot"></span>
+            <a href="#" class="shishen active">
+                <em></em>
+                <i></i>
+            </a>
+            <span class="sperate-pot"></span>
+            <a href="#" class="zhujue">
+                <em></em>
+                <i></i>
+            </a>
+        </nav>
+        <!--平安之旅导航条结束-->
+        <!--式神内容区域-->
+        <div class="intro-container visible-lg">
+            <section class="shishen-container show">
+                <div class="shishen-navbar">
+                    <a href="#" class="btn-all active" data-rare="-1">全部</a>
+                    <a href="#" class="btn-ssr" data-rare="1">SSR</a>
+                    <a href="#" class="btn-sr" data-rare="2">SR</a>
+                    <a href="#" class="btn-r" data-rare="3">R</a>
+                    <a href="#" class="btn-n" data-rare="4">N</a>
+                    <a href="#" class="viewAll" data-rare="-1"></a>
+                </div>
+                <!--左右箭头-->
+                <a href="#" class="prev"></a>
+                <a href="#" class="next"></a>
+
+                <div class="intro-container-wrap">
+                    <!--式神内容-->
+                    <div class="intro-shishen-items">
+                        <ul class="intro-items-1">
+                            <li>
+                                <a href="#"><span><em></em></span><img src=""
+                                                                          alt=""><i class="icon-new"></i></a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class="icon-new"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="intro-items-2">
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class="icon-new"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="intro-items-3">
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="intro-items-4">
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="intro-items-5">
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="intro-items-6">
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="intro-items-6">
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="intro-items-6">
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="intro-items-6">
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <img src="" alt="">
+                                    <i class=""></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="search-box visible-lg">
+                <input type="search" placeholder="请输入寮间问题"/>
+                <a href="#"></a>
+            </div>
+        </div>
+        <!--式神内容区域结束-->
+    </div>
+    <!--式神主角介绍结束-->
+    <script src="js/load_shishen.js"></script>
+    <!--5、攻略-->
+    <div id="strategy">
+        <aside class="strategy-banner">
+            <div class="strategy-banner-lists">
+                <!--图片-->
+                <a href="#" class="active">
+                    <img src="images/gonglue/gl_banner_1.jpg" alt="1">
+                </a>
+                <a href="#">
+                    <img src="images/gonglue/ng_banner_2.jpg" alt="1">
+                </a>
+            </div>
+            <!--按钮-->
+            <div class="strategy-nav-btn">
+                <i class="on"></i>
+                <i></i>
+            </div>
+            <!--广告区域下文本-->
+            <div class="strategy-banner-items">
+                <a href="#" class="system">
+                    <span></span>
+                    <em></em>
+                </a>
+                <a href="#" class="mengXin">
+                    <span></span>
+                    <em></em>
+                </a>
+                <a href="#" class="xuanShang">
+                    <span></span>
+                    <em></em>
+                </a>
+                <a href="#" class="bigFoot">
+                    <span></span>
+                </a>
+            </div>
+            <!--广告区域下文本结束-->
+        </aside>
+        <!--<section class="strategy-wrap">-->
+        <!--导航条-->
+        <nav class="strategy-content-nav">
+            <p class="tab-name-strategy"></p>
+            <span class="sperate-pot"></span>
+            <a href="#" class="xinshou active">
+                <em></em>
+                <i></i>
+            </a>
+            <span class="sperate-pot"></span>
+            <a href="#" class="shishen">
+                <em></em>
+                <i></i>
+            </a>
+            <span class="sperate-pot"></span>
+            <a href="#" class="douji">
+                <em></em>
+                <i></i>
+            </a>
+            <span class="sperate-pot"></span>
+            <a href="#" class="wanfa">
+                <em></em>
+                <i></i>
+            </a>
+        </nav>
+        <!--导航条结束-->
+        <div class="strategy-content">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i></i>
+                        <span>【新手】 【新手】萌新蜕变之路</span>
+
+                        <p>作者：四隅花火</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i></i>
+                        <span>【御魂】 双美联手！青灯行+比丘尼轻松2600！</span>
+
+                        <p>作者：great！+南美颜王</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i></i>
+                        <span>【新手】 红与蓝，效果命中与效果抵抗之争</span>
+
+                        <p>作者：♪╯Frank</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i></i>
+                        <span>【斗技】 6星【武士之灵】！3200分后手队</span>
+
+                        <p>作者：18183-北欧脸帝</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i></i>
+                        <span>【御魂】 我疯起来连自己都砍！【黑童子】解析</span>
+
+                        <p>作者：itmo爱萌游戏</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i></i>
+                        <span>【御魂】 后手队的爱，幻境之姬【辉夜姬】</span>
+
+                        <p>作者：骑士夜</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i></i>
+                        <span>【斗技】 眩晕吧——返魂香【兵俑】的妙用！</span>
+
+                        <p>作者：口袋巴士-先知</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i></i>
+                        <span>【斗技】 盛世美颜，高速鹿将【小鹿男】！</span>
+
+                        <p>作者：＂┽→倥粨</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i></i>
+                        <span>【御魂】 死而复生！【白童子】技能属性解析</span>
+
+                        <p>作者：itmo爱萌游戏</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i></i>
+                        <span>【斗技】 斗技3000分【青行灯】速控流心得啦啦啦啦啦绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿绿</span>
+
+                        <p>作者：18183-Anjackie</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--</section>-->
+    </div>
+    <!--攻略结束-->
+    <!--6、同人专区-->
+    <div id="tongren">
+        <nav class="tongren-nav">
+            <a class="tongren-nav-name" href="#"></a>
+            <ul>
+                <li class="jingxuan active">
+                    <a href="1">
+                        <i></i>
+                        <em></em>
+                    </a>
+                </li>
+                <li class="huihua">
+                    <a href="2">
+                        <i></i>
+                        <em></em>
+                    </a>
+                </li>
+                <li class="cos">
+                    <a href="3">
+                        <i></i>
+                        <em></em>
+                    </a>
+                </li>
+                <li class="movie">
+                    <a href="4">
+                        <i></i>
+                        <em></em>
+                    </a>
+                </li>
+                <li class="novel">
+                    <a href="5">
+                        <i></i>
+                        <em></em>
+                    </a>
+                </li>
+                <li class="gaoshou">
+                    <a href="6">
+                        <i></i>
+                        <em></em>
+                    </a>
+                </li>
+                <!--<li class="tougao">-->
+                <!--<a href="#"></a>-->
+                <!--</li>-->
+            </ul>
+            <div class="tougao">
+                <a href="#"></a>
+            </div>
+        </nav>
+        <div class="tongren-items-wrap">
+            <div class="tongren-items">
+                <div class="tongren-jingxuan items-lists">
+                    <div class="tongren-item">
+                        <a href="#" class="forward">
+                            <img src="images/waite_load.png" alt="jingxuan-1"/>
+
+                            <p></p>
+                            <span>
+                                <em></em>
+                            </span>
+                        </a>
+                        <a href="#" class="backward">
+                            <img src="" alt="jingxuan-1"/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="tongren-item">
+                        <a href="#" class="forward">
+                            <img src="images/waite_load.png" alt="jingxuan-1"/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                        </span>
+                        </a>
+                        <a href="#" class="backward">
+                            <img src="" alt=""/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="tongren-item">
+                        <a href="#" class="forward">
+                            <img src="images/waite_load.png" alt="jingxuan-1"/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                        </span>
+                        </a>
+                        <a href="#" class="backward">
+                            <img src="" alt=""/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="tongren-item">
+                        <a href="#" class="forward">
+                            <img src="images/waite_load.png" alt="jingxuan-1"/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                        </span>
+                        </a>
+                        <a href="#" class="backward">
+                            <img src="" alt=""/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="tongren-item">
+                        <a href="#" class="forward">
+                            <img src="images/waite_load.png" alt="jingxuan-1"/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                        </span>
+                        </a>
+                        <a href="#" class="backward">
+                            <img src="" alt=""/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="tongren-item">
+                        <a href="#" class="forward">
+                            <img src="images/waite_load.png" alt="jingxuan-1"/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                        </span>
+                        </a>
+                        <a href="#" class="backward">
+                            <img src="" alt=""/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="tongren-item">
+                        <a href="#" class="forward">
+                            <img src="images/waite_load.png" alt="jingxuan-1"/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                        </span>
+                        </a>
+                        <a href="#" class="backward">
+                            <img src="" alt=""/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="tongren-item">
+                        <a href="#" class="forward">
+                            <img src="images/waite_load.png" alt="jingxuan-1"/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                        </span>
+                        </a>
+                        <a href="#" class="backward">
+                            <img src="" alt=""/>
+
+                            <p></p>
+                            <span>
+                            <em></em>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--同人专区结束-->
+    <!--7、视频壁纸-->
+    <div id="shipin-bizhi">
+        <section>
+            <aside class="shipin">
+                <a href="#"></a>
+                <a href="#">
+                    <img src="images/shipinbizhi/shipin/shipin-1.jpg" alt="shipin-1"/>
+
+                    <p>《阴阳师》核心玩法</p>
+                </a>
+                <a href="#">
+                    <img src="images/shipinbizhi/shipin/shipin-2.jpg" alt="shipin-2"/>
+
+                    <p>《阴阳师》声优阵容</p>
+                </a>
+                <a href="#">
+                    <img src="images/shipinbizhi/shipin/shipin-3.jpg" alt="shipin-3"/>
+
+                    <p>【阴阳师X极乐净土】抽式神不如跳舞</p>
+                </a>
+            </aside>
+            <aside class="bizhi">
+                <a href="#"></a>
+                <a href="#">
+                    <img src="images/shipinbizhi/bizhi/bizhi-1.jpg" alt="shipin-1"/>
+
+                    <p>游戏场景原画</p>
+                </a>
+                <a href="#">
+                    <img src="images/shipinbizhi/bizhi/bizhi-2.jpg" alt="shipin-2"/>
+
+                    <p>游戏场景原画</p>
+                </a>
+                <a href="#">
+                    <img src="images/shipinbizhi/bizhi/bizhi-3.jpg" alt="shipin-3"/>
+
+                    <p>游戏角色原画</p>
+                </a>
+            </aside>
+        </section>
+    </div>
+    <!--视频壁纸结束-->
+    <!--8、活动-->
+    <div id="activity">
+        <aside class="activity-name"></aside>
+        <a href="#">
+            <img src="images/huodong/acti-1.jpg" alt="acti-1"/>
+            <span>贴吧活动：地表最萌告白开启</span>
+        </a>
+        <a href="#">
+            <img src="images/huodong/acti-2.jpg" alt="acti-2"/>
+            <span>大触觉醒第二季！同人插画大赛</span>
+        </a>
+        <a href="#">
+            <img src="images/huodong/acti-3.jpg" alt="acti-1"/>
+            <span>天机谱：有奖攻略互动计划</span>
+        </a>
+        <a href="#">
+            <img src="images/huodong/acti-4.jpg" alt="acti-4"/>
+            <span>论坛活动，参与有奖</span>
+        </a>
+        <a href="#">
+            <img src="images/huodong/acti-5.jpg" alt="acti-5"/>
+            <span>绝美启幕，敬请期待！</span>
+        </a>
+    </div>
+    <!--活动结束-->
+    <!--11、联系方式-->
+    <div id="contact">
+        <a href="#" class="contact-logo"></a>
+
+        <div class="contact-weibo erweima">
+            <div>
+                <p>关注官方微博</p>
+
+                <p>扫描二维码</p>
+                <i></i>
+            </div>
+            <img src="images/contact/erweima-weibo.png" alt="weibo"/>
+            <em></em>
+            <a href="#">
+                微博名:
+                <span>网易阴阳师手游</span>
+            </a>
+        </div>
+        <div class="contact-weixin erweima">
+            <div>
+                <p>关注微信公众号</p>
+
+                <p>扫描二维码</p>
+                <i></i>
+            </div>
+            <img src="images/contact/erweima-weixin.jpg" alt="weixin"/>
+            <em></em>
+            <a href="#">
+                公众号:
+                <span>yinyangshi163</span>
+            </a>
+        </div>
+        <div class="contact-server erweima">
+            <h1></h1>
+
+            <p>客户服务电话</p>
+
+            <p class="tel-num">0571-26201179</p>
+            <em></em>
+            <span>
+                <a href="#">问题反馈</a>
+                <a href="#">精灵咨询</a>
+            </span>
+        </div>
+        <a href="#" class="to-top"></a>
+    </div>
+    <!--11、联系方式结束-->
+    <!--9、游戏下载二维码-->
+    <div id="downLoad">
+        <h1></h1>
+
+        <h2></h2>
+        <a href="#">
+            <div>
+                <img src="images/banner/download/erweima.png" alt="download"/>
+
+                <p></p>
+            </div>
+            <em></em>
+        </a>
+    </div>
+    <!--游戏下载二维码结束-->
+    <!--10、页脚-->
+    <div id="footer">
+
+    </div>
+    <!--页脚结束-->
+    <p id="shengming" style="color: #e4393c;font-size: 16px;margin:20px auto;width: 980px;">此页面参考阴阳师，仅作学习交流</p>
+
+</div>
+
+<script src="js/yys.js"></script>
+<script src="js/addNews.js"></script>
+</body>
+</html>

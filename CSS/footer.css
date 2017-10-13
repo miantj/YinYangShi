@@ -1,0 +1,87 @@
+#footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  min-width: 980px;
+}
+#footer ul.footer_wrap {
+  margin: 0 auto;
+  width: 980px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#footer ul.footer_wrap li:not(:last-child) {
+  border-right: 1px solid #e5e9ef;
+  margin-right: 10px;
+}
+#footer ul.footer_wrap li {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#footer ul.footer_wrap li p {
+  width: 100%;
+  color: #717171;
+}
+#footer ul.footer_wrap li.tips a {
+  width: 100px;
+  margin: 10px 0;
+}
+#footer ul.footer_wrap li.pic {
+  align-items: center;
+}
+#footer ul.footer_wrap li.pic a {
+  width: 60px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+#footer ul.footer_wrap li.pic a div {
+  position: absolute;
+  bottom: 110px;
+  left: -21px;
+  width: 100px;
+  height: 0;
+  opacity: 0;
+  transition: all .3s;
+  overflow: hidden;
+}
+#footer ul.footer_wrap li.pic a div img {
+  width: 100px;
+  height: 100px;
+}
+#footer ul.footer_wrap li.pic em {
+  width: 56px;
+  height: 56px;
+  background: url("img/icons.png") no-repeat;
+}
+#footer ul.footer_wrap li.pic span {
+  color: #222;
+}
+#footer ul.footer_wrap li.pic a:hover div {
+  height: 100px;
+  opacity: 1;
+  bottom: 110px;
+}
+#footer ul.footer_wrap li.pic a:nth-child(3) em {
+  background-position: 0 0;
+}
+#footer ul.footer_wrap li.pic a:nth-child(3):hover em {
+  background-position: -66px 0;
+}
+#footer ul.footer_wrap li.pic a:nth-child(1) em {
+  background-position: 0 -128px;
+}
+#footer ul.footer_wrap li.pic a:nth-child(1):hover em {
+  background-position: -66px -128px;
+}
+#footer ul.footer_wrap li.pic a:nth-child(2) em {
+  background-position: 0 -256px;
+}
+#footer ul.footer_wrap li.pic a:nth-child(2):hover em {
+  background-position: -66px -256px;
+}
